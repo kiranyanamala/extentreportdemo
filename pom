@@ -1,0 +1,27 @@
+What Is Page Object Model (POM)?
+Page Object model is an object design pattern in Selenium.
+
+The Page Object Design Pattern advantages:
+Readable: clean separation between test code and page specific code such as locators and methods.
+
+Maintainability  - separate classes are created for different pages of a web application.if there is any change in any 
+					element of a website then we only need to make changes in one class, and not in all classes.
+					
+Reusable – multiple test scripts use the same web elements
+
+Easy project Structure – Its project structure is quite easy and understandable.
+
+PageFactory – PageFactory in the page object model in order to initialize the web element and store elements in the cache.
+
+The annotation @FindBy is used in Pagefactory to identify an element while POM without Pagefactory 
+uses the driver.findElement() method to locate an element.
+
+Non POM
+driver.findElement(By.name("txtUsername"));
+
+POM
+
+@FindBy(name = "txtUsername")
+WebElement userName;
+
+initElements is a static method of PageFactory class which is used to initialize all the web elements located by @FindBy annotation. 					
